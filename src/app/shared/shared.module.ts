@@ -12,6 +12,4 @@ import { DropdownDirective } from './dropdown.directive';
     DropdownDirective
   ]
 })
-export class SharedModule {
-
-}
+export class SharedModule {}

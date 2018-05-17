@@ -1,12 +1,4 @@
-.mt-10 {
-  margin-top: 10px;
-}
-
 input.ng-invalid.ng-touched,
-textarea.nginvalid.ng-touched {
+textarea.ng-invalid.ng-touched {
   border: 1px solid red;
-}
-
-.img{
-  margin: auto;
 }

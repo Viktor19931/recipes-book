@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as firebase from 'firebase';
 
 @Component({
@@ -6,9 +6,8 @@ import * as firebase from 'firebase';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-
-  constructor() {}
+export class AppComponent implements OnInit {
+  loadedFeature = 'recipe';
 
   ngOnInit() {
     firebase.initializeApp({
@@ -19,5 +18,9 @@ export class AppComponent implements OnInit{
       storageBucket: 'recipesbook-845f3.appspot.com',
       messagingSenderId: '426449704619'
     });
+  }
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 }

@@ -1,26 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Response } from '@angular/http';
 
-import { DataStorageService } from '../services/data-storage/data-storage.service';
-import { AuthService } from '../services/auth/auth.service';
+import { DataStorageService } from '../shared/data-storage.service';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-
-export class HeaderComponent implements OnInit {
-
-  constructor(private storeService: DataStorageService,
-              public auth: AuthService) {
-
-  }
-
-  ngOnInit() {
+export class HeaderComponent {
+  constructor(private dataStorageService: DataStorageService,
+              private authService: AuthService) {
   }
 
   onSaveData() {
-    this.storeService.storeRecipes()
+    this.dataStorageService.storeRecipes()
       .subscribe(
         (response: Response) => {
           console.log(response);
@@ -28,11 +22,11 @@ export class HeaderComponent implements OnInit {
       );
   }
 
-  onLogout() {
-    this.auth.logOut();
+  onFetchData() {
+    this.dataStorageService.getRecipes();
   }
 
-  onFetchData() {
-    this.storeService.getRecipes();
+  onLogout() {
+    this.authService.logout();
   }
 }
