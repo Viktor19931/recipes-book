@@ -4,7 +4,6 @@ import { Store } from '@ngrx/store';
 
 import * as fromApp from '../../store/app.reducers';
 import * as AuthActions from '../store/auth.actions';
-import {TrySignup} from '../store/auth.actions';
 
 @Component({
   selector: 'app-signup',
