@@ -2,9 +2,6 @@ import * as ShoppingListActions from './shopping-list.actions';
 
 import { Ingredient } from '../../shared/ingredient.model';
 
-export const ADD_INGREDIENT = 'ADD_INGREDIENT';
-export const ADD_INGREDIENTS = 'ADD_INGREDIENTS';
-
 export interface State {
   ingredients: Ingredient[];
   editedIngredient: Ingredient;
