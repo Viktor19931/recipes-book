@@ -16,7 +16,7 @@ const initialState: State = {
     new Recipe(
       'Tasty Schnitzel',
       'A super-tasty Schnitzel - just awesome!',
-      'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+      'https://photos.bigoven.com/recipe/hero/main---wiener-schnitzel-8f03d26e1f0f2601215a7029.jpg',
       [
         new Ingredient('Meat', 1),
         new Ingredient('French Fries', 20)
